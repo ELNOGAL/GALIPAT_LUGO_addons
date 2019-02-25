@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="report_sessionsummary_custom" inherit_id="point_of_sale.report_sessionsummary">
+            <t t-foreach="o.statement_ids" position="after">
+                    <h4>Details by product</h4>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th class="text-right">Quantity</th>
+                                <th class="text-right">Price unit</th>
+                                <th class="text-right">Subtotal</th>
+                                <th class="text-right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="qty_total" t-value="0" />
+                            <t t-set="subtotal_total" t-value="0" />
+                            <t t-set="subtotal_incl_total" t-value="0" />
+                            <tr t-foreach="o.product_summary_ids" t-as="line">
+                                <t t-set="qty" t-value="line.qty" />
+                                <t t-set="price_unit" t-value="line.price_unit" />
+                                <t t-set="subtotal" t-value="line.price_subtotal" />
+                                <t t-set="subtotal_incl" t-value="line.price_subtotal_incl" />
+                                <td><span t-field="line.product_id"/></td>
+                                <td class="text-right"><span t-esc="('%.2f'% qty).replace('.',',')"/></td>
+                                <td class="text-right"><span t-esc="('%.2f'% price_unit).replace('.',',')"/></td>
+                                <td class="text-right"><span t-esc="('%.2f'% subtotal).replace('.',',')"/></td>
+                                <td class="text-right"><span t-esc="('%.2f'% subtotal_incl).replace('.',',')"/></td>
+                                <t t-set="qty_total" t-value="qty_total+line.qty" />
+                                <t t-set="subtotal_total" t-value="subtotal_total+line.price_subtotal" />
+                                <t t-set="subtotal_incl_total" t-value="subtotal_incl_total+line.price_subtotal_incl" />
+                            </tr>
+                            <tr>
+                                <td class="text-right">TOTAL:</td>
+                                <td class="text-right"><span t-esc="('%.2f'% qty_total).replace('.',',')"/></td>
+                                <td></td>
+                                <td class="text-right"><span t-esc="('%.2f'% subtotal_total).replace('.',',')"/></td>
+                                <td class="text-right"><span t-esc="('%.2f'% subtotal_incl_total).replace('.',',')"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </t>
+        </template>
+
+    </data>
+</openerp>

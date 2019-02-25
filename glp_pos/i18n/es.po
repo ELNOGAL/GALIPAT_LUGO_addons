@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* glp_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 08:07+0000\n"
+"PO-Revision-Date: 2019-02-25 09:08+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.9\n"
+
+#. module: glp_pos
+#: view:website:point_of_sale.report_sessionsummary
+msgid "Details by product"
+msgstr "Detalles por producto"
+
+#. module: glp_pos
+#: field:product.summary.session,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: glp_pos
+#: model:ir.model,name:glp_pos.model_product_summary_session
+msgid "Group products on pos sessions"
+msgstr "Agrupar productos en sesiones pos"
+
+#. module: glp_pos
+#: field:product.summary.session,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: glp_pos
+#: field:product.summary.session,__last_update:0
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: glp_pos
+#: field:product.summary.session,session_id:0
+msgid "Pos Session"
+msgstr "Sesión de TPV"
+
+#. module: glp_pos
+#: field:product.summary.session,price_unit:0
+#: view:website:point_of_sale.report_sessionsummary
+msgid "Price unit"
+msgstr "Precio unitario"
+
+#. module: glp_pos
+#: field:product.summary.session,product_id:0
+#: view:website:point_of_sale.report_sessionsummary
+msgid "Product"
+msgstr "Producto"
+
+#. module: glp_pos
+#: field:pos.session,product_summary_ids:0
+msgid "Product Summary"
+msgstr "Resumen por producto"
+
+#. module: glp_pos
+#: field:product.summary.session,qty:0
+#: view:website:point_of_sale.report_sessionsummary
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: glp_pos
+#: view:pos.session:glp_pos.view_pos_session_form_glp
+msgid "Statements"
+msgstr "Extractos"
+
+#. module: glp_pos
+#: field:product.summary.session,price_subtotal:0
+#: view:website:point_of_sale.report_sessionsummary
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: glp_pos
+#: view:pos.session:glp_pos.view_pos_session_form_glp
+msgid "Summary by Product"
+msgstr "Resumen por producto"
+
+#. module: glp_pos
+#: view:website:point_of_sale.report_sessionsummary
+msgid "TOTAL:"
+msgstr "TOTAL:"
+
+#. module: glp_pos
+#: field:product.summary.session,price_subtotal_incl:0
+#: view:website:point_of_sale.report_sessionsummary
+msgid "Total"
+msgstr "Total"
+
+#. module: glp_pos
+#: view:pos.session:glp_pos.view_pos_session_form_glp
+msgid "Total amount"
+msgstr "Importe total"
+
+#. module: glp_pos
+#: view:pos.session:glp_pos.view_pos_session_form_glp
+msgid "Total amount incl"
+msgstr "Importe total con impuestos"
+
+#. module: glp_pos
+#: view:pos.session:glp_pos.view_pos_session_form_glp
+msgid "Total qty"
+msgstr "Cantidad total"
